@@ -1,0 +1,8 @@
+var body = $response.body;
+
+body = body.replace('"rewardDisabled":true,"emailDownload":false,"nowaterFreeDownEnabled":false,"downloadNeedSubscribe":true', '"rewardDisabled":false,"emailDownload":true,"nowaterFreeDownEnabled":true,"downloadNeedSubscribe":false');
+body=body.replace('"minAmount":8,"amountList":[8,10,15,18,88]', '"minAmount":5,"amountList":[5,10,15,18,88]')
+
+body = body.replace('"finished":false","finished":true');
+
+$done({body});
